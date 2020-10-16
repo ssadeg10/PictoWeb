@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face{
+    font-family: 'nintendo';
+    src: url(./assets/font/Nintendo-DS-BIOS.ttf)format('truetype');
+}
+@font-face{
+    font-family: 'basis33';
+    src: url('./assets/font/basis33.ttf');
+}
+
+*{
+    font-family: 'Roboto';
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    /* max-width: 1280px; */
+    margin: 0 auto;
+    position: relative;
+    /* padding-bottom: -500px; */
+    /* padding: 2%; */
+    /* relates to footer height */
+    /* padding-bottom: 200px; */
+    /* relates to top header */
+    /* padding-top: 0; */
+    /* height: 100%; */
+    width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    /* min-width: 100vw; */
+}
+header{
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* margin-bottom: -2%; */
+}
+main{
+    margin: 0 auto;
+    width: 100%;
+    /* min-height: 100vh; */
+}
+footer{
+    /* height: 220px; */
+    width: 100%;
+    position: absolute;
+    /* left: 0; */
+    bottom: 0;
+    background-color: #cdcdcd;
+    text-align: center;
+    font-size: 16px;
+    /* border: 2px solid red; */
+}
+.line{
+    clear: both;
+    background-color: #3e3e3e;
+    height: 2px;
+    margin-top: 4%;
+    width: 104%;
+}
+.line, #containerUserElements{
+    display: flex;
+}
+#logo{
+    width: 275px;
+}
+#containerLogo{
+    max-width: 320px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+#version{position: absolute; bottom: 0; right: 0;}
+#wrapper{
+    /* background-color: rgb(87, 180, 237); */
+    background-color: #668fd1;
+    display: table;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%
+    /* padding-bottom: 2%; */
+    /* margin: 0 auto; */
+    /* border-radius: 0 0 8px 8px; */
+    /* border: 2px solid yellow; */
+}
+/* Contains #containerMssg */
+/* #containerMssgTop{
+    
+} */
+#containerMssg{
+    display: flex;
+    width: 100%;
+    flex: 1;
+    /* grid-template-columns: 1fr 3fr; */
+    padding: 0.5rem;
+    bottom: 200px;
+    top: 70.34px;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    /* text-align: center; */
+    overflow-y: scroll;
+    /* border-top: 1px solid black;
+    border-bottom: 1px solid black; */
+    position: absolute;
+    z-index: 3;
+}
+.mssg{
+    margin: 0.4rem;
+    /* width: 200px; */
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.mssgUsername{
+    padding: 5px 10px;
+    margin: 0 auto;
+    border-right: 2px solid rgb(85, 85, 85);
+    border-bottom: 2px solid rgb(85, 85, 85);
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 8px;
+    background-color: lightgray;
+    color: rgb(85, 85, 85);
+    position: absolute;
+    z-index: 2;
+}
+.sysMssg{
+    margin: 0.4rem;
+    /* width: 450px; */
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 8px;
+    font-style: italic;
+    color: rgb(230, 230, 230);
+    background-color: black;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+.sysText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 7px 0 5px;
+    height: 100%;
+}
+ul{
+    list-style: none;
+}
+.canvas{
+    /* width: 800px;
+    height: 300px; */
+    margin: auto;
+    background-color: #ffffff;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 8px;
+}
+#containerDraw{
+    position: relative;
+    z-index: 2;
+}
+#drawLayer{
+    background-color: transparent;
+}
+#containerText{
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+}
+#name{
+    padding: 1.2% 2% 1.2% 2%;
+    margin: 0 auto;
+    border: 2px solid;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    /* background-color: white; */
+    /* color: rgb(85, 85, 85); */
+    position: absolute;
+    z-index: 3;
+}
+
+/* Contains #containerUserElements */
+/* #containerUserElTop{
+    
+} */
+/* Contains tools and message canvas */
+#containerUserElements{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: #cdcdcd;
+    /* border-radius: 8px; */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+#containerCanvas{
+    position: relative;
+}
+#containerSizes, #containerMssgPanel{
+    /* flex-direction: row; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+}
+#containerTools, #containerClear{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 2%; */
+}
+.btn.toolbarButton, .btn.mssgButton{
+    margin: 3px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    float: left;
+    background-color: transparent !important;
+}
+.disableSelect{
+    user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+#draw{
+    background: url("../assets/pencil.svg");
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    background-position: center;
+}
+#erase{
+    background: url("../assets/eraser.svg");
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    background-position: center;
+}
+#lg, #md, #sm{
+    background: url("../assets/circle.svg");
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    background-position: center;
+}
+#md{
+    background-size: 25px auto;
+}
+#sm{
+    background-size: 15px auto;
+}
+#send{
+    background: url("../assets/up.svg");
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    background-position: center;
+}
+#clone{
+    background: url("../assets/down.svg");
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    background-position: center;
+}
+#clear{
+    background: url("../assets/clear.svg");
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    background-position: center;
+}
+.tooltip{
+    display: flex;
+    margin: 5px;
+    /* margin-left: -200px; */
+}
+.tooltip-inner{
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px){
+    
+}
