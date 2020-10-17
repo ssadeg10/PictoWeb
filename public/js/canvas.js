@@ -155,10 +155,10 @@ window.addEventListener("load", ()=>{
             ctx.fill();
         };
 
-        $('canvas').mousemove(function(e){
-            if(e.buttons == 1) console.log("y: " + pos.y);
-        });
-        $('canvas').click(()=> console.log("y: " + pos.y));
+        // $('canvas').mousemove(function(e){
+        //     if(e.buttons == 1) console.log("y: " + pos.y);
+        // });
+        // $('canvas').click(()=> console.log("y: " + pos.y));
 
         document.getElementById("lg").addEventListener('click', ()=> lineWidth('lg'));
         document.getElementById("md").addEventListener('click', ()=> lineWidth('md'));
