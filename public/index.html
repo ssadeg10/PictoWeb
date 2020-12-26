@@ -8,48 +8,52 @@
     <title>Picto</title>
 </head>
 <body>
-    <div id="containerMain">
-        <div id="logo">
-            <img src="./assets/pictoweb_logo.svg">
+    <div class="loginTop">
+        <div class="containerMainLeft"></div>
+        <div id="containerMain">
+            <div id="logo">
+                <img src="./assets/pictoweb_logo.svg">
+            </div>
+            <br>
+            <main id="mainJoin">
+                <form action="chat.html">
+                    <div class="formGroup username">
+                        <label for="username">Username</label>
+                        <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            placeholder="Enter your username..."
+                            maxlength="18"
+                            autocomplete="off"
+                            required
+                        />
+                    </div>
+                    <div class="formGroup btn-group-toggle user-colors" data-toggle="buttons">
+                        <label for="color" id="userColor">User Color</label>
+                        <label class="btn btn-secondary rounded-circle rbColor c1">
+                        <input type="radio" name="color" value="purple" id="c1">
+                        </label>
+                        <label class="btn btn-secondary rounded-circle rbColor c2">
+                        <input type="radio" name="color" value="red" id="c2">
+                        </label>
+                        <label class="btn btn-secondary rounded-circle rbColor c3">
+                        <input type="radio" name="color" value="green" id="c3">
+                        </label>
+                        <label class="btn btn-secondary rounded-circle rbColor c4">
+                            <input type="radio" name="color" value="orange" id="c4">
+                        </label>
+                        <label class="btn btn-secondary rounded-circle rbColor c5">
+                            <input type="radio" name="color" value="blue" id="c5">
+                        </label>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary btn-lg" style="box-shadow: none;">Join</button>
+                </form>
+                <p id="mobile">*This app will not display properly on smaller screens*</p>
+            </main>
         </div>
-        <br>
-        <main id="mainJoin">
-            <form action="chat.html">
-                <div class="formGroup username">
-                    <label for="username">Username</label>
-                    <input
-                        type="text"
-                        name="username"
-                        id="username"
-                        placeholder="Enter your username..."
-                        maxlength="18"
-                        autocomplete="off"
-                        required
-                    />
-                </div>
-                <div class="formGroup btn-group-toggle user-colors" data-toggle="buttons">
-                    <label for="color" id="userColor">User Color</label>
-                    <label class="btn btn-secondary rounded-circle rbColor c1">
-                      <input type="radio" name="color" value="purple" id="c1">
-                    </label>
-                    <label class="btn btn-secondary rounded-circle rbColor c2">
-                      <input type="radio" name="color" value="red" id="c2">
-                    </label>
-                    <label class="btn btn-secondary rounded-circle rbColor c3">
-                      <input type="radio" name="color" value="green" id="c3">
-                    </label>
-                    <label class="btn btn-secondary rounded-circle rbColor c4">
-                        <input type="radio" name="color" value="orange" id="c4">
-                    </label>
-                    <label class="btn btn-secondary rounded-circle rbColor c5">
-                        <input type="radio" name="color" value="blue" id="c5">
-                    </label>
-                  </div>
-                  <br>
-                  <button type="submit" class="btn btn-primary btn-lg" style="box-shadow: none;">Join</button>
-            </form>
-            <p id="mobile">*This app will not display properly on smaller screens*</p>
-        </main>
+        <div class="containerMainRight"></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

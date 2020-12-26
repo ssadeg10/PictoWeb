@@ -34,6 +34,7 @@ body{
     width: 100vw;
     height: 100%;
     min-height: 100%;
+    overflow: hidden;
     /* min-width: 100vw; */
 }
 header{
@@ -70,14 +71,21 @@ footer{
 #logo{
     width: 275px;
 }
-#containerLogo{
-    max-width: 320px;
+#containerHeader{
+    /* max-width: 800px; 320px */
     padding: 12px;
     display: flex;
     flex-direction: row;
     position: relative;
 }
-#version{position: absolute; bottom: 0; right: 0;}
+#version{
+    /* position: absolute;
+    bottom: 0;
+    right: 0; */
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+}
 #wrapper{
     /* background-color: rgb(87, 180, 237); */
     background-color: #668fd1;
