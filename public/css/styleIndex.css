@@ -78,4 +78,8 @@ html, body{
         margin: 0;
         padding: 10px;
     }
+    .github-icon{
+        width: 58px;
+        height: 58px;
+    }
 }

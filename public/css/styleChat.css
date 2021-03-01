@@ -351,4 +351,8 @@ ul{
         bottom: 0;
         left: 0;
     }
+    .github-icon{
+        width: 58px;
+        height: 58px;
+    }
 }
