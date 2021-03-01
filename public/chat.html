@@ -21,7 +21,7 @@
                         <a href="./index.html">
                             <img id="logo" src="./assets/pictoweb_logo.svg"/>
                         </a>
-                        <p id="version">0.1.1</p>
+                        <p id="version">0.1.2</p>
                     </div>
                 </header>
                 <!-- <div class="line"></div> -->
@@ -32,54 +32,51 @@
                             <!-- <div class="mssg">
                                 <img src="./assets/pictoweb_logo.svg">
                             </div> -->
+                            <button id="mobileHideUserElements" onclick="hidePalette()">hide</button>
                         </div>
                     <!-- </div> -->
                 </main>
-                <footer class="disableSelect">
-                    <!-- <div id="containerUserElTop"> -->
-                        <div id="containerUserElements">
-                            <!-- <div id="containerToolbar"> -->
-                                <div id="containerTools">
-                                    <button class="btn toolbarButton toolFunction disableSelect" id="draw" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Draw"></button>
-                                    <button class="btn toolbarButton toolFunction disableSelect" id="erase" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Erase"></button>
-                                </div>
-                                <div id="containerSizes">
-                                    <!-- <div class="lineWidth" id="containerLineWidth"></div> -->
-                                    <button class="btn toolbarButton lineWidth disableSelect" id="lg" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Large Tip"></button>
-                                    <button class="btn toolbarButton lineWidth disableSelect" id="md" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Medium Tip"></button>
-                                    <button class="btn toolbarButton lineWidth disableSelect" id="sm" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Small Tip"></button>
-                                </div>                    
-                            <!-- </div> -->
-                            <div id="containerCanvas">
-                                <p class="h6 disableSelect" id="name">username</p>
-                                <!-- Remove opaque pixels/anti-aliasing -->
-                                <svg width="0" height="0" style="position:absolute;z-index:-1;">
-                                    <defs>
-                                    <filter id="remove-alpha" x="0" y="0" width="100%" height="100%">
-                                        <feComponentTransfer>
-                                        <feFuncA type="discrete" slope="01"></feFuncA>
-                                        </feComponentTransfer>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                                <!-- End remove anti-aliasing -->
-                                <div id="containerDraw">
-                                    <canvas class="canvas" id="drawLayer">Your browser does not support HTML5 Canvas</canvas>
-                                </div>
-                                <div id="containerText">
-                                    <canvas class="canvas" id="textLayer">Your browser does not support HTML5 Canvas</canvas>
-                                </div>
-                                
+                <footer class="disableSelect" id="footer">
+                    <div id="containerUserElements">
+                            <div id="containerTools">
+                                <button class="btn toolbarButton toolFunction disableSelect" id="draw" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Draw"></button>
+                                <button class="btn toolbarButton toolFunction disableSelect" id="erase" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Erase"></button>
                             </div>
-                            <div id="containerMssgPanel">
-                                <button class="btn mssgButton disableSelect" id="send" data-toggle="tooltip" data-placement="right" data-trigger="hover" title="Send"></button>
-                                <button class="btn mssgButton disableSelect" id="clone" data-toggle="tooltip" data-placement="right" data-trigger="hover" title="Clone"></button>
+                            <div id="containerSizes">
+                                <!-- <div class="lineWidth" id="containerLineWidth"></div> -->
+                                <button class="btn toolbarButton lineWidth disableSelect" id="lg" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Large Tip"></button>
+                                <button class="btn toolbarButton lineWidth disableSelect" id="md" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Medium Tip"></button>
+                                <button class="btn toolbarButton lineWidth disableSelect" id="sm" data-toggle="tooltip" data-placement="left" data-trigger="hover" title="Small Tip"></button>
                             </div>
-                            <div id="containerClear">
-                                <button class="btn mssgButton disableSelect" id="clear" data-toggle="tooltip" data-placement="right" data-trigger="hover" title="Clear"></button>
+                        <div id="containerCanvas">
+                            <p class="h6 disableSelect" id="name">username</p>
+                            <!-- Remove opaque pixels/anti-aliasing -->
+                            <svg width="0" height="0" style="position:absolute;z-index:-1;">
+                                <defs>
+                                <filter id="remove-alpha" x="0" y="0" width="100%" height="100%">
+                                    <feComponentTransfer>
+                                    <feFuncA type="discrete" slope="01"></feFuncA>
+                                    </feComponentTransfer>
+                                    </filter>
+                                </defs>
+                            </svg>
+                            <!-- End remove anti-aliasing -->
+                            <div id="containerDraw">
+                                <canvas class="canvas" id="drawLayer">Your browser does not support HTML5 Canvas</canvas>
                             </div>
+                            <div id="containerText">
+                                <canvas class="canvas" id="textLayer">Your browser does not support HTML5 Canvas</canvas>
+                            </div>
+                            
                         </div>
-                    <!-- </div> -->
+                        <div id="containerMssgPanel">
+                            <button class="btn mssgButton disableSelect" id="send" data-toggle="tooltip" data-placement="right" data-trigger="hover" title="Send"></button>
+                            <button class="btn mssgButton disableSelect" id="clone" data-toggle="tooltip" data-placement="right" data-trigger="hover" title="Clone"></button>
+                        </div>
+                        <div id="containerClear">
+                            <button class="btn mssgButton disableSelect" id="clear" data-toggle="tooltip" data-placement="right" data-trigger="hover" title="Clear"></button>
+                        </div>
+                    </div>
                 </footer>
             <!-- </div> -->
         </div>

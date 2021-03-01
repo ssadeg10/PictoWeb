@@ -69,7 +69,9 @@ footer{
     display: flex;
 }
 #logo{
-    width: 275px;
+    /* max-width: 275px;
+    min-width: 200px; */
+    width: 250px;
 }
 #containerHeader{
     /* max-width: 800px; 320px */
@@ -89,10 +91,10 @@ footer{
 #wrapper{
     /* background-color: rgb(87, 180, 237); */
     background-color: #668fd1;
-    display: table;
+    /* display: table; */
     margin: 0 auto;
     width: 100%;
-    height: 100%
+    height: 100%;
     /* padding-bottom: 2%; */
     /* margin: 0 auto; */
     /* border-radius: 0 0 8px 8px; */
@@ -296,7 +298,57 @@ ul{
 .tooltip-inner{
     font-size: 16px;
 }
+#mobileHideUserElements{
+    background-color: #cdcdcd;
+    display: none;
+}
 
 @media only screen and (max-width: 600px){
+    #body{
+        width: 100%;
+    }
+    #logo{ max-width: 200px; min-width: 175px; }
+    #containerUserElements{
+        display: grid;
+        grid-template-columns: [col0] 12.5% [col1] 12.5% [col2] 12.5% [col3] 12.5% [col4] 12.5% [col5] 12.5% [col6] 12.5% [col7] 12.5% [col8];
+        grid-template-rows: [row0] 25% [row1] 75%;
+        overflow: hidden;
+    }
     
+    .btn.toolbarButton, .btn.mssgButton{ margin: 0; } /*4% margin*/
+    .tooltip{ visibility: hidden; }
+    #containerTools{ flex-direction: row; }
+    #containerSizes{
+        flex-direction: row;
+        grid-column-start: 3;
+        grid-row-start: 1;
+    }
+    #containerMssg{
+        transition: 0.5s;
+    }
+    #footer{
+        transition: 0.5s;
+    }
+    #containerMssgPanel{
+        /* margin-left: -5%; */
+        flex-direction: row;
+        grid-column-start: 6;
+        grid-row-start: 1;
+    }
+    #containerClear{
+        grid-column-start: 8;
+        grid-row-start: 1;
+        /* max-width: 35px; */
+    }
+    #containerCanvas{
+        grid-column-start: 1;
+        grid-row-start: 2 span;
+    }
+
+    #mobileHideUserElements{
+        display: inline;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
 }

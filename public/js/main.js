@@ -5,6 +5,14 @@ const mssgDiv = document.getElementById('containerMssg');
 
 const canvasEl = document.getElementById('drawLayer');
 const usernameEl = document.getElementById('name');
+const foot = document.getElementById('footer');
+var footHidden = false;
+
+const dropHeight = document.body.offsetHeight - document.getElementById('containerHeader').offsetHeight - document.getElementById('mobileHideUserElements').offsetHeight + 13;
+const dropStr = dropHeight + "px";
+const origStr = mssgDiv.offsetHeight + "px";
+mssgDiv.style.height = origStr;
+foot.style.height = foot.offsetHeight + "px";
 // const {userJoin, getCurrentUser} = require('../utils/users');
 // const formatColor = require('../utils/colors');
 
@@ -86,4 +94,16 @@ function outputMessage(mssg){
     div.classList.add('disableSelect');
     div.innerHTML = `<p class='sysText'>${mssg}</p>`;
     mssgDiv.appendChild(div);
+}
+
+function hidePalette(){
+    if (!footHidden) {
+        foot.style.height = "0";
+        mssgDiv.style.height = dropStr;
+        footHidden = true;
+    } else {
+        foot.style.height = "200px";
+        mssgDiv.style.height = origStr;
+        footHidden = false;
+    }
 }

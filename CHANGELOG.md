@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (2021-3-1)
+### Added
+- Experimental mobile support (touch and layout)
+
 ## 0.1.1 (2020-12-26)
 ### Fixed
 - Fixed page scroll glitching

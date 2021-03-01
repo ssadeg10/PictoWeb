@@ -62,6 +62,9 @@ html, body{
     /* #logo{
         max-width: 300px;
     } */
+    .loginTop{
+        height: 100%;
+    }
     #containerMain{
         margin: 0 35px 0 35px;
         /* padding: 10% 5%; */
